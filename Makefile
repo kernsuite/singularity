@@ -1,4 +1,4 @@
-IMAGE=kern-1.img
+IMAGE=kern-2.img
 
 .PHONY: bootstrap
 
@@ -15,4 +15,4 @@ upgrade:
 	sudo singularity exec --writable ${IMAGE} apt-get upgrade
 
 list:
-	curl -s http://ppa.launchpad.net/kernsuite/kern-1/ubuntu/dists/xenial/main/binary-amd64/Packages.gz | zgrep Package | awk {'print $$2}' | xargs echo
+	curl -s http://ppa.launchpad.net/kernsuite/kern-2/ubuntu/dists/xenial/main/binary-amd64/Packages.gz | zgrep Package | awk {'print $$2}' | xargs echo
