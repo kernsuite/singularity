@@ -7,6 +7,14 @@ needs to work with radio telescope data.
 
 http://kernsuite.info/
 
+# Requirements
+
+apt-get install these:
+
+ - debootstrap
+ - singularity-container
+ 
+ 
 ## build your own
 
 run make:
