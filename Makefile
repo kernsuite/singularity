@@ -1,14 +1,13 @@
-IMAGE=kern-2.img
+IMAGE=kern-3.img
 
-.PHONY: bootstrap
+.PHONY: build
 
-all: bootstrap
+all: build
 
 ${IMAGE}:
-	sudo singularity create -s 10000 ${IMAGE}
+	sudo singularity build ${IMAGE} Singularity
 
-bootstrap: ${IMAGE}
-	sudo singularity bootstrap ${IMAGE} Singularity
+build: ${IMAGE}
 
 upgrade:
 	sudo singularity exec --writable ${IMAGE} apt-get update
