@@ -1,4 +1,6 @@
-IMAGE=kern-3.img
+VERSION=4
+IMAGE=kern-${VERSION}.img
+DIST=bionic
 
 .PHONY: build
 
@@ -14,4 +16,4 @@ upgrade:
 	sudo singularity exec --writable ${IMAGE} apt-get upgrade
 
 list:
-	curl -s http://ppa.launchpad.net/kernsuite/kern-2/ubuntu/dists/xenial/main/binary-amd64/Packages.gz | zgrep Package | awk {'print $$2}' | xargs echo
+	curl -s http://ppa.launchpad.net/kernsuite/kern-${VERSION}/ubuntu/dists/bionic/main/binary-amd64/Packages.gz | zgrep Package | awk {'print $$2}' | xargs echo
