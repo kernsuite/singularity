@@ -1,4 +1,4 @@
-VERSION=4
+VERSION=5
 IMAGE=kern-${VERSION}.img
 DIST=bionic
 
